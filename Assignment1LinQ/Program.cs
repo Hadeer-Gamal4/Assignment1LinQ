@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading;
 using LinqDemo;
 using static LinqDemo.ListGenerator;
@@ -114,7 +115,28 @@ namespace Assignment1LinQ
 
             //4
             //int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
-            //var result=Arr.Where((x,Index)=>)
+            //var result = Arr.Where((x, Index) => new
+            //{
+            //    number = x,
+            //    inplace = x,
+            //    x == Index
+            //});
+            //foreach (var item in result)
+            //    Console.WriteLine(item);
+
+
+            //5
+
+
+            //6
+            //var result = CustomerList.SelectMany(customer => customer.Orders).Where(customer => customer.Total < 500);
+            //foreach (var item in result)
+            //    Console.WriteLine(item);
+
+            //7
+            //var result = CustomerList.SelectMany(customer => customer.Orders).Where(customer=>customer.OrderDate.Year >= 1998);
+            //foreach (var item in result) 
+            //    Console.WriteLine(item);
 
             #endregion
 
@@ -123,4 +145,6 @@ namespace Assignment1LinQ
 
         }
     }
+
+    internal record arr(int Number, bool InPlace);
 }
